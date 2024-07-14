@@ -81,7 +81,13 @@ p{
 }
 
 p.my-intro {
-    font-size: 16px;
+    font-size: 17px;
+}
+
+@media screen and (max-width: 768px) {
+    p.my-intro {
+        font-size: 18px; /* Adjust this value as needed for mobile */
+    }
 }
 
 ul{

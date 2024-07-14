@@ -5,7 +5,7 @@
 }
 
 html, body {
-    font-family: "JetBrains Mono",monospace;
+    font-family: "JetBrainsMono Nerd Font Mono",Raleway,Noto Sans;
     /*color: #222;*/
     color: whitesmoke;
     user-select: none;
@@ -175,8 +175,9 @@ img{
     padding: 8px 16px;
     /* padding: 10px 24px; */
     display: flex;
-    justify-content: center;
-    gap: 35px;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 35px; */
 }
 
 .reverse-modal-choice-btns {
@@ -190,15 +191,15 @@ img{
     padding: 10px 24px;
     border: none;
     border-radius: 5px;
+    font-family: "JetBrainsMono Nerd Font Mono",Raleway,Noto Sans;
 }
 
 .modal-accept-btn:hover {
-    background: lightskyblue ;
+    background-color: lightskyblue ;
     font-size: 16px;
-    font-family: JetBrains Mono;
+    font-family: "JetBrainsMono Nerd Font Mono",Raleway,Noto Sans;
     border: none;
     border-radius: 5px;
-    padding: 10px 24px;
 }
 
 /* modal input */
@@ -288,7 +289,7 @@ input{
     width: 170px;
     height: 50px; 
     font-size: 13px;
-    font-family: "JetBrainsMono Nerd Font Mono";
+    font-family: "JetBrainsMono Nerd Font Mono",Raleway,Noto Sans;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -339,4 +340,5 @@ input{
 .item7 {
     animation-delay: calc(7s / 6 * (6 - 1) * -1 );
     animation-duration: 7s;
+    font-family: "JetBrainsMono Nerd Font Mono",Raleway,Noto Sans;
 }

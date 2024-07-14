@@ -234,6 +234,9 @@ input{
     line-height: 23px;
     margin-bottom: 0;}
 
+.fa-shake {
+  animation: fa-shake 2s infinite linear;
+}
 
 /* Scroll animations */
 

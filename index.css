@@ -5,9 +5,10 @@
 }
 
 html, body {
-    font-family: "JetBrains Mono";
+    font-family: "JetBrains Mono",monospace;
     /*color: #222;*/
     color: whitesmoke;
+    user-select: none;
 }
 
 /* Block Flow Animation */
@@ -172,9 +173,10 @@ img{
 .modal-choice-btns{
     margin-top: 10px;
     padding: 8px 16px;
+    /* padding: 10px 24px; */
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 35px;
 }
 
 .reverse-modal-choice-btns {
@@ -182,14 +184,21 @@ img{
 }
 
 .modal-btn{
-    padding: 10px 24px;
     cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+    padding: 10px 24px;
+    border: none;
+    border-radius: 5px;
 }
 
 .modal-accept-btn:hover {
-    background: #2dd4bf;
+    background: lightskyblue ;
     font-size: 16px;
     font-family: JetBrains Mono;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 24px;
 }
 
 /* modal input */
@@ -217,3 +226,117 @@ input{
     height: 140px;
     line-height: 23px;
     margin-bottom: 0;}
+
+
+/* Scroll animations */
+
+.inline-wrapper {
+    background: none;
+    z-index: 2;
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 50px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+        );
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0),
+    );
+}
+
+.wrapper {
+    background: none;
+    z-index: 2;
+    width: 90%;
+    max-width: 1536px;
+    margin-inline: auto;
+    position: relative;
+    height: 50px;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+        );
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0),
+    );
+}
+
+.item {
+    width: 170px;
+    height: 50px; 
+    font-size: 13px;
+    font-family: "JetBrainsMono Nerd Font Mono";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    background-color: #131313;
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(170px * 6), 100% );
+    animation-name: scrollLeft;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.custom-size {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+@keyframes scrollLeft {
+    to{
+        left: -170px;
+    }
+}
+
+.item1 {
+    animation-delay: calc(20s / 6 * (6 - 1) * -1 );
+}
+.item2 {
+    animation-delay: calc(20s / 6 * (6 - 2) * -1 );
+}
+.item3 {
+    animation-delay: calc(20s / 6 * (6 - 3) * -1 );
+}
+.item4 {
+    animation-delay: calc(20s / 6 * (6 - 4) * -1 );
+}
+.item5 {
+    animation-delay: calc(20s / 6 * (6 - 5) * -1 );
+}
+.item6 {
+    animation-delay: calc(20s / 6 * (6 - 6) * -1 );
+}
+
+.item7 {
+    animation-delay: calc(7s / 6 * (6 - 1) * -1 );
+    animation-duration: 7s;
+}
